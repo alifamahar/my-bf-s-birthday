@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+body{
+    background-color: azure;
+    font-family: 'Poppins',cursive;
+}
+
+
+
+/*blog*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 225px;
+    text-align: center; /* Center the text within the container */
+}
+
+#blog h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.container-blog.fade-out {
+    animation: fadeOut 1.5s forwards; /* Animasi fadeOut saat kelas fade-out ditambahkan */
+}
+.container-blog{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    opacity: 0; /* Mulai dengan opasitas 0 */
+    animation: fadeIn 1.5s forwards; /* Animasi fadeIn dengan durasi 1.5 detik */
+}
+
+/*blog: gallery*/
+.container-blog .box{
+    position: relative;
+    max-width: 350px;
+    height: 200px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container-blog .box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-blog .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-blog .box:hover{
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+} 
+
+.container-blog .box .imgBx:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container-blog .box:hover .imgBx:before{
+    opacity: 0.8;
+}
+
+/*blog: gallery: text*/
+.container-blog .box .txt{
+    position: relative;
+    color: #030303;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.5s all;
+    transform: translateY(30px);
+    margin: 60px 30px 15px 20px;
+}
+
+.container-blog .box:hover .txt{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.container-blog .box .txt h2{
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.container-blog .box .txt p{
+    letter-spacing: 1;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+/*blog: gallery: button*/
+.container-blog .box .btn{
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    outline: #58ad6d solid 1px;
+    color: #5c3100;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.container-blog .box .btn2{
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    background-color: #58ad6d;
+    color: #fff;
+    outline: #5c3100 solid 1px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.container-blog .box .btn:hover{
+    background-color: #438252;
+    color: #000000;
+    outline: #000000 solid 1px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.container-blog .box .btn2:hover{
+    background-color: #438252;
+    color: #fff;
+    outline: #000000 solid 1px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-bottom: 5px;
+}
+
+

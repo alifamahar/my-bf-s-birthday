@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha</title>
+    <link rel="stylesheet" href="style/coba.css">
+</head>
+<body>
+    <div class="container">
+        <img src="img/captcha2.png" alt="captcha" class="captcha">
+        <div class="password" id="password">
+            <h2>Insert captcha to continue</h2>
+            <h4>Proof you are my boyfriend</h4>
+            <form id="passwordForm" onsubmit="checkPassword(event)">
+                <input type="password" id="passwordInput" placeholder="Insert captcha" required>
+                <button type="submit" class="buttonpwd">Submit</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="script/coba.js"></script>
+</body>
+</html>
